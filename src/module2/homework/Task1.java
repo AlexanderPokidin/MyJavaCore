@@ -117,8 +117,9 @@ public class Task1 {
 
     static int secondLargest(int[] array) {  //secondLargest(int array[])
         int l = array.length-1;
+        int m = max(array);
         for (int item : array) {
-            if (l < item && item < max(array)) {
+            if (l < item && item < m) {
                 l = item;
             }
         }
@@ -127,8 +128,9 @@ public class Task1 {
 
     static double secondLargest(double[] data) {  // secondLargest(double[])
         double l = data.length-1;
+        double m = max(data);
         for (double item : data) {
-            if (l < item && item < max(data)) {
+            if (l < item && item < m) {
                 l = item;
             }
         }
