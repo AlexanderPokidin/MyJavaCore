@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class Task2 {
     static String[] ownerNames = {"Jane", "Ann", "Jack", "Oww", "Lane"};
+    static int[] balances = {1200, 250, 2000, 500, 3200};
 
     static int balancesSum(int[] balances) {
         int sum = 0;
@@ -57,8 +58,14 @@ public class Task2 {
 
     //HOMEWORK 2.1
     static double withdrawBalance(double balance, double withdrawal) {
-
-
+        double commision = withdrawal / 100 * 5;
+        double balanceAfter = balance - withdrawal - commision;
+        if (balanceAfter > 0) {
+            System.out.println("OK " + commision + " " + balanceAfter);
+        }
+        else {
+            System.out.println("NO");
+        }
         return 0;
     }
 
@@ -76,10 +83,14 @@ public class Task2 {
     }
 
     public static void main(String[] args) {
+        double balance = 100;
+        double withdrawal = 10;
 
-        int[] balances = {1200, 250, 2000, 500, 3200};
+        System.out.println(withdrawBalance(balance, withdrawal));
 
-        System.out.println(Arrays.toString(balances));
+
+
+        //System.out.println(Arrays.toString(balances));
 
 
         int[] balances1 = {200, 200, 500, 4000, 30};
