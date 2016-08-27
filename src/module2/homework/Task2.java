@@ -65,8 +65,15 @@ public class Task2 {
 
     //HOMEWORK 2.2
     static double withdrawBalance(String ownerName, double withdrawal) {
-
-        return 0;
+        double sumBalanse = 0;
+        double commission =  withdrawal * 0.05;
+        double result = 0;
+        for (int i = 0; i < ownerNames.length; i++) {
+            if (ownerNames[i] == ownerName) {
+                sumBalanse = balances[i];
+            } result = sumBalanse - withdrawal - commission;
+        }
+        return result;
     }
 
     //HOMEWORK 2.3
@@ -77,8 +84,9 @@ public class Task2 {
 
     public static void main(String[] args) {
         double balance = 100;
-        double withdrawal = 10;
-        double commission =  withdrawal * 0.05;
+        double withdrawal = 100;
+        double commission = withdrawal * 0.05;
+        String ownerName = "Ann";
 
         if (withdrawBalance(balance, withdrawal) >= 0) {
             System.out.println("OK " + commission + " " + withdrawBalance(balance, withdrawal));
@@ -86,8 +94,13 @@ public class Task2 {
             System.out.println("NO");
         }
 
-        int[] balances1 = {200, 200, 500, 4000, 30};
+        if (withdrawBalance(ownerName, withdrawal) >= 0) {
+            System.out.println(ownerName + " " + withdrawal + " " + withdrawBalance(ownerName, withdrawal));
+        } else {
+            System.out.println(ownerName + " NO");
+        }
 
+        int[] balances1 = {200, 200, 500, 4000, 30};
     }
 
 }
