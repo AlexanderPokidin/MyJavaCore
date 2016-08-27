@@ -50,7 +50,6 @@ public class Task2 {
         //logic
         System.out.println("test....");
 
-
     }
 
     //параметры
@@ -58,20 +57,14 @@ public class Task2 {
 
     //HOMEWORK 2.1
     static double withdrawBalance(double balance, double withdrawal) {
-        double commision = withdrawal / 100 * 5;
-        double balanceAfter = balance - withdrawal - commision;
-        if (balanceAfter > 0) {
-            System.out.println("OK " + commision + " " + balanceAfter);
-        }
-        else {
-            System.out.println("NO");
-        }
-        return 0;
+        double commission =  withdrawal * 0.05;
+        double result = balance - withdrawal - commission;
+
+        return result;
     }
 
     //HOMEWORK 2.2
     static double withdrawBalance(String ownerName, double withdrawal) {
-
 
         return 0;
     }
@@ -85,13 +78,13 @@ public class Task2 {
     public static void main(String[] args) {
         double balance = 100;
         double withdrawal = 10;
+        double commission =  withdrawal * 0.05;
 
-        System.out.println(withdrawBalance(balance, withdrawal));
-
-
-
-        //System.out.println(Arrays.toString(balances));
-
+        if (withdrawBalance(balance, withdrawal) >= 0) {
+            System.out.println("OK " + commission + " " + withdrawBalance(balance, withdrawal));
+        } else {
+            System.out.println("NO");
+        }
 
         int[] balances1 = {200, 200, 500, 4000, 30};
 
