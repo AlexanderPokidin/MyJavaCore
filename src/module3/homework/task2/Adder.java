@@ -1,7 +1,12 @@
 package module3.homework.task2;
 
-/**
- * Created by unit on 28.08.2016.
- */
-public class Adder {
+
+public class Adder extends Arithmetic {
+    boolean check(Integer a, Integer b) {
+        boolean result = false;
+        if (a >= b)
+            result = true;
+
+        return result;
+    }
 }
