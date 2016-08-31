@@ -1,10 +1,15 @@
 package module3.homework.task3;
 
+<<<<<<< HEAD
 public class CollegeStudent extends Student{
+=======
+public class CollegeStudent extends Student {
+>>>>>>> origin/master
     String collegeName;
     int rating;
     long id;
 
+<<<<<<< HEAD
     public CollegeStudent() {
     }
 
@@ -21,4 +26,8 @@ public class CollegeStudent extends Student{
         this.rating = rating;
         this.id = id;
     }
+=======
+
+
+>>>>>>> origin/master
 }
