@@ -3,12 +3,16 @@ package module3.homework.task1;
 
 public class Bird extends Animal {
 
-    void fly() {
+    public void fly() {
         System.out.println("I am flying");
     }
-    void sing() { System.out.println("I am singing"); }
-    void bird() { System.out.println("I am Bird"); }
+
+    public void sing() {
+        System.out.println("I am singing");
+    }
+
+    public void bird() {
+        System.out.println("I am Bird");
+    }
 
 }
-
-
