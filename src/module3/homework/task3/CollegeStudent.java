@@ -1,15 +1,11 @@
 package module3.homework.task3;
 
-<<<<<<< HEAD
-public class CollegeStudent extends Student{
-=======
 public class CollegeStudent extends Student {
->>>>>>> origin/master
-    String collegeName;
-    int rating;
-    long id;
 
-<<<<<<< HEAD
+    private String collegeName;
+    private int rating;
+    private long id;
+
     public CollegeStudent() {
     }
 
@@ -26,8 +22,29 @@ public class CollegeStudent extends Student {
         this.rating = rating;
         this.id = id;
     }
-=======
 
+    public String getCollegeName() {
+        return collegeName;
+    }
 
->>>>>>> origin/master
+    public void setCollegeName(String collegeName) {
+        this.collegeName = collegeName;
+    }
+
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 }
+
