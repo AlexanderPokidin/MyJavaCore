@@ -30,8 +30,11 @@ public class User {
         return balance;
     }
 
-    private void companyNameLength() {
-        for (int nameLength = 0; nameLength < companyName.length(); nameLength++);
+    private int companyNameLength() {
+        int nameLength;
+        for (nameLength = 0; nameLength < companyName.length(); nameLength++) {
+        }
+        return nameLength;
     }
 
     private void monthIncreaser(int addMonth) {
