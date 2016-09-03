@@ -3,10 +3,10 @@ package module3.homework.task3;
 import java.util.Date;
 
 public class Course {
-    Date startDate;
-    String name;
-    int hoursDuration;
-    String teacherName;
+    private Date startDate;
+    private String name;
+    private int hoursDuration;
+    private String teacherName;
 
     public Course(Date startDate, String name) {
         this.startDate = startDate;

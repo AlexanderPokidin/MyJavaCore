@@ -18,27 +18,24 @@ public class User {
     }
 
     private void paySalary() {
-        balance = balance + salary;
+        balance += salary;
     }
 
     private int withdraw(int summ) {
-        if(summ < 1000) {
-            balance = balance - (summ + summ * 5 / 100);
+        if (summ < 1000) {
+            balance -= (summ + summ * 5 / 100);
         } else {
-            balance = balance - (summ + summ * 10 / 100);
+            balance -= (summ + summ * 10 / 100);
         }
         return balance;
     }
 
-    private int companyNameLength() {
-        int nameLength;
-        for (nameLength = 0; nameLength < companyName.length(); nameLength++) {
-        }
-        return nameLength;
+    private void companyNameLength() {
+        int nameLength = companyName.length();
     }
 
     private void monthIncreaser(int addMonth) {
-        monthOfEmployment = monthOfEmployment + addMonth;
+        monthOfEmployment += addMonth;
     }
 
     public String getName() {

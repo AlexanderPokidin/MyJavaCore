@@ -7,31 +7,26 @@ import java.util.Arrays;
  */
 public class TestClass2 {
     static int[] balances = {1200, 250, 2000, 500, 3200};
+    static String[] ownerNames = {"Jane", "Ann", "Jack", "Oww", "Lane"};
 
-    static double withdrawBalance(double balance, double withdrawal) {
-        double commission =  withdrawal * 0.05;
-        double result = balance - withdrawal - commission;
+    static double fundBalance(String ownerName, double fund) {
+        double sumBalance = 0;
+        double result = 0;
+        for (int i = 0; i < ownerNames.length; i++) {
+            if (ownerNames[i] == ownerName) {
+                sumBalance = balances[i];
+            } result = sumBalance + fund;
+        }
         return result;
     }
 
-
     public static void main(String[] args) {
-        double balance = 100;
-        double withdrawal = 10;
-        double commission =  withdrawal * 0.05;
+        String ownerName = "Oww";
+        double fund = 100;
 
-        if (withdrawBalance(balance, withdrawal) >= 0) {
-            System.out.println("OK " + commission + " " + withdrawBalance(balance, withdrawal));
-        } else {
-            System.out.println("NO");
-        }
-
-
+        System.out.println(ownerName + " " + fundBalance(ownerName, fund));
 
     }
-
-
-
 }
 
 

@@ -8,6 +8,9 @@ public class Main {
 
         Date date = new Date();
 
+
+
+
         Course chemistry = new Course(date, "John", "John", 25,"Smoozy");
         Course physics = new Course();
         Course mathematics = new Course();
