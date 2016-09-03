@@ -2,15 +2,14 @@ package module3.homework.task3;
 
 
 public class Student {
+    public Student() {
+    }
 
     private String firstName;
     private String lastName;
     private int group;
     private Course[] coursesTaken;
     private int age;
-
-    public Student() {
-    }
 
     protected Student(String firstName, String lastName, int group) {
         this.firstName = firstName;
@@ -51,7 +50,7 @@ public class Student {
         return coursesTaken;
     }
 
-    public void setCoursesTaken(Course[] coursesTaken) {
+    public void setCoursesTaken(Course[] coursesTaken)   {
         this.coursesTaken = coursesTaken;
     }
 
