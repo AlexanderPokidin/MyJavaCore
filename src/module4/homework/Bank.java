@@ -1,4 +1,4 @@
-package module4;
+package module4.homework;
 
 public abstract class Bank {
     public Bank() {
@@ -25,9 +25,11 @@ public abstract class Bank {
     abstract int getLimitOfWithdrawAll();
     abstract int getLimitOfFunding();
     abstract int getMonthluRate();
-    abstract int getCommission();
+    abstract int getCommission(int summ);
 
-    double moneyPaidMonthlyForSalary() {};
+    double moneyPaidMonthlyForSalary() {
+        return 0;
+    };
 
 
 
