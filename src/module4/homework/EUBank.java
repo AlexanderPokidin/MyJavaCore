@@ -19,7 +19,10 @@ public class EUBank extends Bank {
 
     @Override
     int getMonthluRate() {
-        return 0;
+        int rate;
+        if (getCurrency() == Currency.EUR) rate = 1;
+        else rate = 0;
+        return rate;
     }
 
     @Override

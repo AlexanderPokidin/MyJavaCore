@@ -13,13 +13,16 @@ public class USBank extends Bank{
     int getLimitOfFunding() {
         int fund;
         if (getCurrency() == Currency.EUR) fund = 10000;
-        else fund = 32767; //need to find "no limit if USD"
+        else fund = Integer.MAX_VALUE;
         return fund;
     }
 
     @Override
     int getMonthluRate() {
-        return 0;
+        int rate;
+        if (getCurrency() == Currency.USD) rate = 1;
+        else rate = 2;
+        return rate;
     }
 
     @Override

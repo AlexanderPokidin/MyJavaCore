@@ -11,7 +11,12 @@ public class BankSystemImpl implements BankSystem{
     }
 
     @Override
-    public void findUser(User user, int summ) {
+    public void fundUser(User user, int summ) {
+        Bank userBank = user.getBank();
+        if (userBank.getLimitOfFunding() >= summ) {
+            double newBalance = user.getBalance() + summ;
+            user.setBalance(newBalance);
+        }
 
     }
 
@@ -22,6 +27,11 @@ public class BankSystemImpl implements BankSystem{
 
     @Override
     public void paySalary(User user) {
+        Bank userBank = user.getBank();
+        if (userBank.getLimitOfFunding() >= user.getSalary()) {
+            double newBalance = user.getBalance() + user.getSalary();
+            user.setBalance(newBalance);
+        }
 
     }
 }
