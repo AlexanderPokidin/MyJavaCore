@@ -23,8 +23,11 @@ public abstract class Bank {
     }
 
     abstract int getLimitOfWithdrawAll();
+
     abstract int getLimitOfFunding();
+
     abstract int getMonthluRate();
+
     abstract int getCommission(int summ);
 
     double moneyPaidMonthlyForSalary() {
@@ -33,7 +36,10 @@ public abstract class Bank {
         return moneyPaid;
     }
 
-
+    @Override
+    public String toString() {
+        return "Bank{" + "currency" + currency +"}";
+    }
 
     public long getId() {
         return id;

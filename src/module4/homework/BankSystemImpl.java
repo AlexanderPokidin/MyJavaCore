@@ -1,6 +1,7 @@
 package module4.homework;
 
 public class BankSystemImpl implements BankSystem{
+
     @Override
     public void withdrawOfUser(User user, int summ) {
         Bank userBank = user.getBank();
@@ -17,12 +18,14 @@ public class BankSystemImpl implements BankSystem{
             double newBalance = user.getBalance() + summ;
             user.setBalance(newBalance);
         }
-
     }
 
     @Override
     public void transferMoney(User fromUser, User toUser, int summ) {
-
+        double newBalanceFrom = fromUser.getBalance() - summ;
+        fromUser.setBalance(newBalanceFrom);
+        double newBalanceTo = toUser.getBalance() + summ;
+        toUser.setBalance(newBalanceTo);
     }
 
     @Override
@@ -32,6 +35,5 @@ public class BankSystemImpl implements BankSystem{
             double newBalance = user.getBalance() + user.getSalary();
             user.setBalance(newBalance);
         }
-
     }
 }

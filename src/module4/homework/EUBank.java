@@ -1,6 +1,7 @@
 package module4.homework;
 
 public class EUBank extends Bank {
+
     @Override
     int getLimitOfWithdrawAll() {
         int limit;
@@ -13,7 +14,7 @@ public class EUBank extends Bank {
     int getLimitOfFunding() {
         int fund;
         if (getCurrency() == Currency.USD) fund = 10000;
-        else fund = 2000;
+        else fund = 20000;
         return fund;
     }
 
