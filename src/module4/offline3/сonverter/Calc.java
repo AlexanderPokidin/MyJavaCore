@@ -1,4 +1,4 @@
-package module4.offline3.Converter;
+package module4.offline3.сonverter;
 
 public class Calc implements MoneyConverter{
     private static final int k = 26;

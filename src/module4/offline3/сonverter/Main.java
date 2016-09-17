@@ -1,4 +1,4 @@
-package module4.offline3.Converter;
+package module4.offline3.сonverter;
 
 public class Main {
     public static void main(String[] args) {
