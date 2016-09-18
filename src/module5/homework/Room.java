@@ -26,12 +26,8 @@ public class Room {
 
         Room room = (Room) o;
 
-        if (id != room.id) return false;
         if (price != room.price) return false;
         if (persons != room.persons) return false;
-        if (dataAvailableFrom != null ? !dataAvailableFrom.equals(room.dataAvailableFrom) : room.dataAvailableFrom != null)
-            return false;
-        if (hotelName != null ? !hotelName.equals(room.hotelName) : room.hotelName != null) return false;
         return cityName != null ? cityName.equals(room.cityName) : room.cityName == null;
 
     }

@@ -8,14 +8,20 @@ public class GoogleAPI implements API {
     Data data;
 
     public GoogleAPI() {
-        Room room21 = new Room(1458, 115, 2, data, "Park Inn","Ottava");
+        Room room21 = new Room(5612, 200, 1, data, "Redisson","Bohn");
         Room room22 = new Room(3562, 805, 7, data, "Hilton","Paris");
-        Room room23 = new Room(1587, 300, 2, data, "Palase","Berlin");
+        Room room23 = new Room(4587, 155, 3, data, "Hilton","Paris");
         Room room24 = new Room(1204, 750, 5, data, "Park Inn","Rome");
-        Room room25 = new Room(0265, 548, 4, data, "Ukraine","Kiev");
+        Room room25 = new Room(0265, 200, 1, data, "Redisson","Kiev");
     }
     @Override
     public Room[] findRooms(int price, int persons, String city, String hotel) {
-        return new Room[0];
+        Room temp = new Room(0, price, persons, null, city, hotel);
+        Room[] foundRooms = new Room[5];
+        for (int i = 0; i < rooms.length; i++){
+            if (temp.equals(rooms[i]));
+            foundRooms[i] = temp;
+        }
+        return new Room[5];
     }
 }
