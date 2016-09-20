@@ -8,6 +8,10 @@ public class Main {
         controller.requstRooms(210, 1, "Redisson","Paris");
         controller.requstRooms(155, 3, "Hilton", "Paris");
 
+        controller.check(new BookingComAPI(), new TripAdvisorAPI());
+        controller.check(new BookingComAPI(), new GoogleAPI());
+        controller.check(new TripAdvisorAPI(), new GoogleAPI());
+
 
     }
 
