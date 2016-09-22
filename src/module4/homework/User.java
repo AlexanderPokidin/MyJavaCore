@@ -10,6 +10,11 @@ public class User {
     private int salary;
     private Bank bank;
 
+    @Override
+    public String toString() {
+        return "User " + name +"{" + "balance=" + balance + ", bank=" + bank + "}";
+    }
+
     public User(long id, String name, double balance, int monthsOfEmployment, String companyName, int salary, Bank bank) {
         this.id = id;
         this.name = name;
@@ -18,11 +23,6 @@ public class User {
         this.companyName = companyName;
         this.salary = salary;
         this.bank = bank;
-    }
-
-    @Override
-    public String toString() {
-        return "User " + name +"{" + "balance=" + balance + ", bank=" + bank + "}";
     }
 
     public long getId() {
