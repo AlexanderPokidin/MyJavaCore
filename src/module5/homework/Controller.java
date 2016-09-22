@@ -1,8 +1,10 @@
 package module5.homework;
 
+import java.util.Arrays;
+
 public class Controller {
     private API apis[] = new API[3];
-    DAOImpl dao = new DAOImpl();
+    private DAOImpl dao = new DAOImpl();
 
     public Controller() {
         BookingComAPI bookingComAPI = new BookingComAPI();
@@ -28,6 +30,13 @@ public class Controller {
     }
 
     Room[] check(API api1, API api2) {
+        Room[] result1 = api1.findRooms(0, 0, null, null);
+        Room[] result2 = api2.findRooms(0, 0, null, null);
+        int counter = 0;
+            if (result1.equals(result2)) {
+                counter++;
+        }
+        System.out.println(counter);
         return null;
     }
 

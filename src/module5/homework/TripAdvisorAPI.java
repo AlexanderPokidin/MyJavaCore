@@ -3,8 +3,8 @@ package module5.homework;
 import javax.xml.crypto.Data;
 
 public class TripAdvisorAPI implements API {
-    Room[] rooms = new Room[5];
-    Data data;
+    private Room[] rooms = new Room[5];
+    private Data data;
 
     public TripAdvisorAPI() {
         Room room11 = new Room(8695, 255, 3, data, "Redisson", "Munich");
@@ -20,10 +20,12 @@ public class TripAdvisorAPI implements API {
         Room temp = new Room(0, price, persons, null, city, hotel);
         Room[] foundRooms = new Room[5];
         for (int i = 0; i < rooms.length; i++){
-            if (temp.equals(rooms[i]));
-            foundRooms[i] = temp;
+            if (temp.equals(rooms[i])) {
+                if (temp.getHotelName().equals(rooms[i].getHotelName()));
+                foundRooms[i] = temp;
+            }
         }
-        return new Room[5];
+        return foundRooms;
 
     }
 }
