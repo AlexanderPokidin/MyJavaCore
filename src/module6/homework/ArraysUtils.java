@@ -68,12 +68,19 @@ public class ArraysUtils {
         return secLargOfArray;
     }
 
-    /*static int reverse(int array[]) {
+    static int[] reverse(int array[]) {
+        int[] revArray = new int[array.length];
+        int i = array.length-1;
 
-    }*/
+        for (int item : array) {
+            revArray[i] = item;
+            i--;
+        }
+        return revArray;
+    }
 
-    static int findEvenElements(int array[]) {
-        int foundElem[];
+    static int[] findEvenElements(int array[]) {
+        int[] foundElem = new int[array.length];
         for (int item : array) {
             if (item % 2 == 0) {
                 int i = 0;
@@ -81,7 +88,7 @@ public class ArraysUtils {
                 i++;
             }
         }
-        return 0;
+        return foundElem;
     }
 
 
