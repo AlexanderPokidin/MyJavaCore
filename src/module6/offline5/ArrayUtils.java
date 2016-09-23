@@ -31,7 +31,7 @@ public class ArrayUtils {
     }
 
 
-
+/*
     static Order getActive(Order[] orders) {
         Order[] ordersActive = new Order[orders.length];
         int index = 0;
@@ -40,5 +40,5 @@ public class ArrayUtils {
                 ordersActive[index++] = order;
         }
         return deleteEmpty(orders);
-    }
+    }*/
 }
