@@ -20,6 +20,7 @@ public class MainTest {
 
 
         System.out.println(UserUtils.uniqueUsers(users).toString());
+        System.out.println(UserUtils.usersWithContitionalBalance(users, 6300));
 
 
 //        System.out.println(ArraysUtils.sum(testArray));
