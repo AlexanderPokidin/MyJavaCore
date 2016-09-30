@@ -50,4 +50,8 @@ public class User {
                 ", balance=" + balance +
                 '}';
     }
+
+    public int getBalance() {
+        return balance;
+    }
 }

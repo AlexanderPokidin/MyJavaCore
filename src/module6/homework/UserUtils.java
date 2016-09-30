@@ -10,9 +10,17 @@ public class UserUtils {
         }
         return users;
     }
-/*
-    private static User[] usersWithContitionalBalance(User[] users, int balance) {};
 
+    public static User[] usersWithContitionalBalance(User[] users, int balance) {
+        User[] contBalance = new User[10];
+        int i;
+        for (i = 0; i < users.length; i++) {
+            if (users[i].getBalance() == balance);
+            contBalance[i] = users[i];
+        }
+        return contBalance;
+    };
+/*
     private final static User[] paySalaryToUsers(User[] users) {};
 
     private final static long[] getUsersId(User[] users) {};
