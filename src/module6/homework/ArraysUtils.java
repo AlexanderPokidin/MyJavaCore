@@ -81,9 +81,9 @@ public final class ArraysUtils {
 
     public static int[] findEvenElements(int array[]) {
         int[] foundElem = new int[array.length];
+        int i = 0;
         for (int item : array) {
             if (item % 2 == 0) {
-                int i = 0;
                 foundElem[i] = item;
                 i++;
             }
