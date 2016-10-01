@@ -51,7 +51,21 @@ public class User {
                 '}';
     }
 
+    public long getId() {
+        return id;
+    }
+
+    public int getSalary() {
+        return salary;
+    }
+
     public int getBalance() {
         return balance;
     }
+
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
+
+
 }
