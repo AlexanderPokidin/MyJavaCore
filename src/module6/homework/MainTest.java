@@ -26,8 +26,10 @@ public class MainTest {
         UserUtils.deleteEmptyUsers(users);
         System.out.println("deleteEmptyUsers done");
 
-        UserUtils.uniqueUsers(users);
-        System.out.println("uniqueUsers done");
+        System.out.println(UserUtils.getUsersId(users).toString());
+
+//        UserUtils.uniqueUsers(users);
+//        System.out.println("uniqueUsers done");
 
     }
 }
