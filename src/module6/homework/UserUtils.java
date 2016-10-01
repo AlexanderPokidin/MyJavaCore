@@ -3,11 +3,15 @@ package module6.homework;
 public class UserUtils {
 
     public static User[] uniqueUsers(User[] users) {
-        for (int i = 0; i < users.length; i++) {
-            if (users[i].equals(users)) {
-                users[i] = null;
+        int i, j;
+        for (i = 0; i < users.length; i++) {
+            for (j = i + 1; j < users.length; ++j)
+                if (users[i] != null){
+                    if (users[i].equals(users[j]) && i != j) {
+                        users[j] = null;
+                    }
+                }
             }
-        }
         return users;
     }
 
@@ -15,18 +19,46 @@ public class UserUtils {
         User[] contBalance = new User[10];
         int i;
         for (i = 0; i < users.length; i++) {
-            if (users[i].getBalance() == balance);
-            contBalance[i] = users[i];
+            if (users[i].getBalance() == balance) {
+                contBalance[i] = users[i];
+            }
         }
         return contBalance;
-    };
-/*
-    private final static User[] paySalaryToUsers(User[] users) {};
+    }
 
-    private final static long[] getUsersId(User[] users) {};
+    public final static long[] getUsersId(User[] users) {
+        long[] usersId = new long[10];
+        int i;
+        for (i = 0; i < users.length; i++) {
+            usersId[i] = users[i].getId();
+        }
+        return usersId;
+    }
 
-    private static User[] deleteEmptyUsers(User[] users) {
-        for (item : users) {}
-    };
-*/
+
+    public final static User[] paySalaryToUsers(User[] users) {
+        int i;
+        for (i = 0; i < users.length; i++) {
+            users[i].setBalance(users[i].getBalance() + users[i].getSalary());
+        }
+        return null;
+    }
+
+    public static User[] deleteEmptyUsers(User[] users) {
+        int count = 0;
+        int i, j = 0;
+        for (i = 0; i < users.length; i++) {
+            if (users[i] != null) {
+                count++;
+            }
+        }
+        User[] emptyUsers = new User[count];
+        for (i = 0; i < users.length; i++) {
+            if (users[i] != null) {
+                emptyUsers[j] = users[i];
+                j++;
+            }
+        }
+        return emptyUsers;
+    }
 }
