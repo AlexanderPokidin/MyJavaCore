@@ -28,8 +28,8 @@ public class MainTest {
 
         System.out.println(UserUtils.getUsersId(users).toString());
 
-//        UserUtils.uniqueUsers(users);
-//        System.out.println("uniqueUsers done");
+        UserUtils.uniqueUsers(users);
+        System.out.println("uniqueUsers done");
 
     }
 }
