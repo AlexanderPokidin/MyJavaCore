@@ -12,11 +12,11 @@ public class UserUtils {
                     }
                 }
             }
-        return users;
+        return deleteEmptyUsers(users);
     }
 
     public static User[] usersWithContitionalBalance(User[] users, int balance) {
-        User[] contBalance = new User[10];
+        User[] contBalance = new User[users.length];
         int i;
         for (i = 0; i < users.length; i++) {
             if (users[i].getBalance() == balance) {
