@@ -7,6 +7,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
+
         User user1 = new User(256, "Taras", "Kozlov", "Donetsk", 14500);
         User user2 = new User(286, "Oleg", "Orlov", "Odessa", 22300);
         User user3 = new User(475, "Ivan", "Kozlov", "Dnepr", 21500);

@@ -1,7 +1,6 @@
 package module7.homework;
 
 
-
 public class Order {
     private long id;
     private int price;
