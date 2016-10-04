@@ -1,6 +1,6 @@
 package module7.homework;
 
-public class User {
+public class User implements Comparable<User>{
     private long id;
     private String firstName;
     private String lastName;
@@ -13,5 +13,10 @@ public class User {
         this.lastName = lastName;
         this.city = city;
         this.balance = balance;
+    }
+
+    @Override
+    public int compareTo(User o) {
+        return 0;
     }
 }
