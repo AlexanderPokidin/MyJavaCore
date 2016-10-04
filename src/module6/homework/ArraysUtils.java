@@ -1,8 +1,8 @@
 package module6.homework;
 
-public class ArraysUtils {
+public final class ArraysUtils {
 
-    static int sum(int array[]) {
+    public static int sum(int array[]) {
         int sumOfArray = 0;
         for (int item : array) {
             sumOfArray += item;
@@ -10,7 +10,7 @@ public class ArraysUtils {
         return sumOfArray;
     }
 
-    static int min(int array[]) {
+    public static int min(int array[]) {
         int minOfArray = array[0];
         for (int item : array) {
             if (minOfArray >= item) {
@@ -20,7 +20,7 @@ public class ArraysUtils {
         return minOfArray;
     }
 
-    static int max(int array[]) {
+    public static int max(int array[]) {
         int maxOfArray = array[0];
         for (int item : array) {
             if (maxOfArray <= item) {
@@ -30,7 +30,7 @@ public class ArraysUtils {
         return maxOfArray;
     }
 
-    static int maxPositive(int array[]) {
+    public static int maxPositive(int array[]) {
         int maxPosOfArray = 0;
         for (int item : array) {
             if (maxPosOfArray < item) {
@@ -40,7 +40,7 @@ public class ArraysUtils {
         return maxPosOfArray;
     }
 
-    static int multiplication(int array[]) {
+    public static int multiplication(int array[]) {
         int multArray = array[0];
         for (int item : array) {
             multArray *= item;
@@ -48,14 +48,14 @@ public class ArraysUtils {
         return multArray;
     }
 
-    static int modulus(int array[]) {
+    public static int modulus(int array[]) {
         int firstOfArray = array[0];
         int lastOfArray = array[array.length-1];
         int modArray = firstOfArray % lastOfArray;
         return modArray;
     }
 
-    static int secondLargest(int array[]) {
+    public static int secondLargest(int array[]) {
         int firstLargOfArray = array[0];
         int secLargOfArray = array[0];
         for (int item : array) {
@@ -68,7 +68,7 @@ public class ArraysUtils {
         return secLargOfArray;
     }
 
-    static int[] reverse(int array[]) {
+    public static int[] reverse(int array[]) {
         int[] revArray = new int[array.length];
         int i = array.length-1;
 
@@ -79,17 +79,15 @@ public class ArraysUtils {
         return revArray;
     }
 
-    static int[] findEvenElements(int array[]) {
+    public static int[] findEvenElements(int array[]) {
         int[] foundElem = new int[array.length];
+        int i = 0;
         for (int item : array) {
             if (item % 2 == 0) {
-                int i = 0;
                 foundElem[i] = item;
                 i++;
             }
         }
         return foundElem;
     }
-
-
 }

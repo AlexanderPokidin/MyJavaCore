@@ -1,8 +1,7 @@
 package module7.homework;
 
 
-
-public class Order implements Comparable<Order>{
+public class Order {
     private long id;
     private int price;
     private Currency currency;
@@ -17,11 +16,6 @@ public class Order implements Comparable<Order>{
         this.itemName = itemName;
         this.shopIdentificator = shopIdentificator;
         this.user = user;
-    }
-
-    @Override
-    public int compareTo(Order o) {
-        return price - o.getPrice();
     }
 
     public long getId() {
