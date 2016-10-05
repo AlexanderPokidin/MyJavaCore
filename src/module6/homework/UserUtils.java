@@ -16,8 +16,14 @@ public class UserUtils {
     }
 
     public static User[] usersWithContitionalBalance(User[] users, int balance) {
-        User[] contBalance = new User[users.length];
         int i;
+        int count = 0;
+        for (i = 0; i < users.length; i++) {
+            if (users[i].getBalance() == balance) {
+                count++;
+            }
+        }
+        User[] contBalance = new User[count];
         for (i = 0; i < users.length; i++) {
             if (users[i].getBalance() == balance) {
                 contBalance[i] = users[i];
@@ -27,7 +33,7 @@ public class UserUtils {
     }
 
     public final static long[] getUsersId(User[] users) {
-        long[] usersId = new long[10];
+        long[] usersId = new long[users.length];
         int i;
         for (i = 0; i < users.length; i++) {
             usersId[i] = users[i].getId();
