@@ -12,7 +12,7 @@ public class UserUtils {
                     }
                 }
             }
-        return deleteEmptyUsers(users);
+        return users;
     }
 
     public static User[] usersWithContitionalBalance(User[] users, int balance) {
