@@ -52,7 +52,7 @@ public class Main {
         orderSet.add(order9);
         orderSet.add(order10);
 
-        System.out.println(orderSet);
+//        System.out.println(orderSet);
 
 
 
@@ -76,8 +76,15 @@ public class Main {
         OrderUtils.morePrice(orderList);
         System.out.println(orderList);
 
-//        OrderUtils.ordersCurrency(orderList, Currency.UAH);
-//        System.out.println(orderList);
+        /*OrderUtils.ordersCurrency(orderList, Currency.UAH);
+        System.out.println(orderList);*/
+
+        System.out.println(OrderUtils.checkName(orderSet, "Petrov"));
+
+        System.out.println(OrderUtils.largestPrise(orderSet));
+
+        System.out.println(OrderUtils.delUSD(orderSet));
+
 
     }
 }
