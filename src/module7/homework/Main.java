@@ -69,15 +69,13 @@ public class Main {
         System.out.println(orderList);
         System.out.println("");
 
-        OrderUtils.delDuplicate(orderList);
-        System.out.println(orderList);
-        System.out.println("");
+        System.out.println(OrderUtils.delDuplicate(orderList));
 
-        OrderUtils.morePrice(orderList);
-        System.out.println(orderList);
+        System.out.println(OrderUtils.morePrice(orderList));
 
-        /*OrderUtils.ordersCurrency(orderList, Currency.UAH);
-        System.out.println(orderList);*/
+        System.out.println(OrderUtils.ordersCurrency(orderList));
+
+
 
         System.out.println(OrderUtils.checkName(orderSet, "Petrov"));
 

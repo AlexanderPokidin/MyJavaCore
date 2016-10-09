@@ -50,15 +50,23 @@ public class OrderUtils {
         return orders;
     }
 
-//    public static List<Order> ordersCurrency (List<Order> orders, Currency currency) {
-//        List<Order> foundCurOrders = new ArrayList<>();
-//        for (Order item : orders) {
-//            if (item.getCurrency().equals(currency)) {
-//                foundCurOrders.add(item);
-//            }
-//        }
-//        return foundCurOrders;
-//    }
+    public static List<List<Order>> ordersCurrency (List<Order> orders) {
+        List<List<Order>> foundCurOrders = new ArrayList<>();
+        List<Order> orderUsd = new ArrayList<>();
+        List<Order> orderUah = new ArrayList<>();
+        for (Order item : orders) {
+            if (item.getCurrency().equals(Currency.USD)) {
+                orderUsd.add(item);
+            }
+            if (item.getCurrency().equals(Currency.UAH)) {
+                orderUah.add(item);
+            }
+            foundCurOrders.add(orderUsd);
+            foundCurOrders.add(orderUah);
+        }
+        return foundCurOrders;
+    }
+    
 
     public static boolean checkName(Set<Order> orders, String lastName) {
         boolean check = false;
