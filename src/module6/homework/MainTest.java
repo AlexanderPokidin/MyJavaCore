@@ -5,6 +5,7 @@ public class MainTest {
 
     public static void main(String[] args) {
 
+
         User user1 = new User(25, "Oleg", "Petrov", 500, 5700);
         User user2 = new User(27, "Taras", "Petrov", 700, 5300);
         User user3 = new User(29, "Ivan", "Kozlov", 900, 8400);
@@ -27,6 +28,7 @@ public class MainTest {
         System.out.println("deleteEmptyUsers done");
 
         System.out.println(UserUtils.getUsersId(users).toString());
+        UserUtils.deleteEmptyUsers(users).toString();
 
         UserUtils.uniqueUsers(users);
         System.out.println("uniqueUsers done");
