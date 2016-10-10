@@ -16,6 +16,17 @@ public class User {
         this.balance = balance;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", city='" + city + '\'' +
+                ", balance=" + balance +
+                '}';
+    }
+
     public long getId() {
         return id;
     }
