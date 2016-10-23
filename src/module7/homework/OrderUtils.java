@@ -66,7 +66,15 @@ public class OrderUtils {
         }
         return foundCurOrders;
     }
-    
+
+//    public static List<List<Order>> ordersCity (List<Order> orders) {
+//        List<List<Order>> cityOrders = new ArrayList<>();
+//        int count = 0;
+//        for (Order item : orders) {
+//            List<String> city = new ArrayList<>();
+//            if (item.getUser().getCity())
+//        }
+//    }
 
     public static boolean checkName(Set<Order> orders, String lastName) {
         boolean check = false;
