@@ -56,13 +56,13 @@ public class Main {
         System.out.println("---------------------------------------------");
 
         //Increase Order and City
-        orderList.stream().sorted((o1, o2) -> o1.getPrice() != o2.getPrice() ? o1.compareTo(o2)
+        orderList.stream().sorted((o1, o2) -> o1.getPrice() != o2.getPrice() ? Integer.compare(o1.getPrice(), o2.getPrice())
                 : o1.getUser().getCity().compareTo(o2.getUser().getCity())).collect(Collectors.toList())
                 .forEach(System.out::println);
         System.out.println("---------------------------------------------");
 
         //ItemName and Shop and City
-        orderList.stream().sorted((o1, o2) -> o1.getItemName() != o2.getItemName() ? o1.compareTo(o2)
+        orderList.stream().sorted((o1, o2) -> o1.getItemName() != o2.getItemName() ? o1.getItemName().compareTo(o2.getItemName())
                 : o1.getShopIdentificator() != o2.getShopIdentificator() ? o1.getShopIdentificator().compareTo(o2.getShopIdentificator())
                 : o1.getUser().getCity().compareTo(o2.getUser().getCity())).collect(Collectors.toList())
                 .forEach(System.out::println);
