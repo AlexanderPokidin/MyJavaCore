@@ -42,5 +42,14 @@ public class Main {
         //Task4
         ExceptionTask4 e = new ExceptionTask4();
         e.f();
+        System.out.println("----------");
+
+        //Task5
+        ExceptionTask4 c = new ExceptionTask4();
+        try {
+            c.h();
+        } catch (Exception e1) {
+            System.out.println("All Exceptions was catch");
+        }
     }
 }
