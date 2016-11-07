@@ -37,7 +37,10 @@ public class Main {
         } catch (NullPointerException e1) {
             System.out.println("User is empty");
         }
+        System.out.println("----------");
 
-
+        //Task4
+        ExceptionTask4 e = new ExceptionTask4();
+        e.f();
     }
 }
