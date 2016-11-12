@@ -12,6 +12,6 @@ public interface BusinessProcessor {
 
     public List<Animal> getAnimalsByName(String name);
 
-    public void enrichAnimals(String name; int delta);
+    //public void enrichAnimals(String name; int delta);
 
 }

@@ -15,8 +15,8 @@ public class DataModule {
     public void remove (Animal a) {
         animals.remove(a);
     }
-
-    public List<Animal> getAnimals(){
-        return 0;
-    }
+//
+//    public List<Animal> getAnimals(){
+//        return 0;
+//    }
 }
