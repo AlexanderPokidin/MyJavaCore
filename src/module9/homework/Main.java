@@ -98,5 +98,7 @@ public class Main {
         System.out.println(OrderUtils.separateCurrensy(orderList));
         System.out.println("---------------------------------------------");
 
+        //Separate City
+        System.out.println(OrderUtils.separateCity(orderList));
     }
 }

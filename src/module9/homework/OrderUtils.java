@@ -3,6 +3,7 @@ package module9.homework;
 import module7.homework.*;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class OrderUtils {
 
@@ -18,6 +19,11 @@ public class OrderUtils {
         foundCurOrders.add(orderUsd);
         foundCurOrders.add(orderUah);
         return foundCurOrders;
+    }
+
+    public static Map<String, List<Order>> separateCity(List<Order> orders) {
+        Map<String, List<Order>> foundCityOrders = orders.stream().collect(Collectors.groupingBy(o -> o.getUser().getCity()));
+        return foundCityOrders;
     }
 
 }
